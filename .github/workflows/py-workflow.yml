@@ -19,7 +19,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: latesh98/task-app::{{$GITHUB_SHA}}
+          tags: latesh98/task-app:${{ github.sha }}
 
       - name: Deploy
-        run: docker run -d -p 5000:5000 latesh98/task-app::{{$GITHUB_SHA}}
+        run: docker run -d -p 5000:5000 latesh98/task-app:${{ github.sha }}
