@@ -1,0 +1,14 @@
+name: test-workflow
+
+on:
+  push:
+
+jobs:
+  printhellow:
+    runs-on: ubuntu:latest
+
+    steps:
+      - name: printing
+        shell: bash
+        run: | 
+          echo " Application Testing"
