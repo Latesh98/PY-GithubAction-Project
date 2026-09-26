@@ -12,7 +12,7 @@ jobs:
 
       - name: name build image 
         run: |
-          docker build -t latesh98/task-app::{{$GITHUB_SHA}} .
+          docker build -t latesh98/task-app:{{$GITHUB_SHA}} .
 
       - name: Push Image to docker hub
         uses: docker/build-push-action@v4
