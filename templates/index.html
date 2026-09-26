@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Task Manager</h1>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add a new task..." required>
+            <button type="submit">Add</button>
+        </form>
+
+        <div class="toolbar">
+            <button id="show-all-btn" type="button">Show All Tasks</button>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <p class="hint">Click a task to mark it done. Click the ✕ button to delete it.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
